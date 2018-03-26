@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void submitOrder(View view) {
 
-       String message = "That would be $" + (quantity * 5) + " please.";
+       String message = "You owe " + (quantity * 5) + " bucks please.";
        displayMessage(message);
     }
 
