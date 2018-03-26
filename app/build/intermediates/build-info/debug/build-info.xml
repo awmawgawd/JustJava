@@ -6,22 +6,22 @@
     density="560dpi"
     format="10"
     plugin-version="3.0.1"
-    timestamp="1522092734841"
+    timestamp="1522093061275"
     token="-5194682844959511310"
     verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="174" />
+        duration="160" />
     <task
         name="instant-run-dex"
-        duration="21" />
+        duration="27" />
     <task
         name="instant-run-transform"
-        duration="49" />
+        duration="42" />
     <task
         name="verifier"
-        duration="5" />
+        duration="4" />
 
     <artifact
         location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\reload-dex\debug\classes.dex"
@@ -152,6 +152,38 @@
     <build
         build-mode="HOT_WARM"
         timestamp="1522092734841"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\builds\debug\1522092734841\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1522092916258"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\builds\debug\1522092916258\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1522092931338"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\builds\debug\1522092931338\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1522093023015"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\builds\debug\1522093023015\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1522093061275"
         verifier="COMPATIBLE" >
         <artifact
             location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\reload-dex\debug\classes.dex"
