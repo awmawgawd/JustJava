@@ -6,19 +6,19 @@
     density="560dpi"
     format="10"
     plugin-version="3.0.1"
-    timestamp="1522092554148"
+    timestamp="1522092647103"
     token="-5194682844959511310"
     verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="154" />
+        duration="161" />
     <task
         name="instant-run-dex"
-        duration="20" />
+        duration="23" />
     <task
         name="instant-run-transform"
-        duration="34" />
+        duration="35" />
     <task
         name="verifier"
         duration="4" />
@@ -136,6 +136,14 @@
     <build
         build-mode="HOT_WARM"
         timestamp="1522092554148"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\builds\debug\1522092554148\classes.dex"
+            type="RELOAD_DEX" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1522092647103"
         verifier="COMPATIBLE" >
         <artifact
             location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\reload-dex\debug\classes.dex"
