@@ -40,7 +40,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void submitOrder(View view) {
 
-        displayPrice(quantity * 5);
+       String message = "Amount due $" + (quantity * 5);
+       displayMessage(message);
     }
 
     /**
@@ -85,6 +86,13 @@ public class MainActivity extends AppCompatActivity {
             quantity = 0;
         }
         display(quantity);
+    }
+    /**
+     * This method displays the given text on the screen.
+     */
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
     }
 
 }
