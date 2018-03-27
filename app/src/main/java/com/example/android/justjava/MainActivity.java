@@ -38,10 +38,8 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void submitOrder(View view) {
-
-        String message = "Total: $" + calculatePrice(quantity);
-        message = message + "\nThank You!";
-        displayMessage(message);
+        int price = calculatePrice();
+        displayPrice(price);
     }
 
     /**
@@ -50,7 +48,6 @@ public class MainActivity extends AppCompatActivity {
     private void displayQuantity(int numcoffees) {
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText("" + numcoffees);
-
 
         // Write number into log: Log.v(String, String)
         Log.v("number", "" + numcoffees);
@@ -61,7 +58,20 @@ public class MainActivity extends AppCompatActivity {
      */
     private void displayPrice(int number) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+        if(number != 0){
+            priceTextView.setText(NumberFormat.getCurrencyInstance().format(number) + "\n" + displayMessage());
+        }
+        else{
+             priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+        }
+    }
+
+    /**
+     * This method displays the given text on the screen.
+     */
+    private String displayMessage() {
+        String message = "Thank you!";
+        return message;
     }
 
     /**
@@ -85,21 +95,14 @@ public class MainActivity extends AppCompatActivity {
         displayQuantity(quantity);
     }
 
-    /**
-     * This method displays the given text on the screen.
-     */
-    private void displayMessage(String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(message);
-    }
 
     /**
      * Calculates the price of the order based on the current quantity.
      *
      * @return the price
      */
-    private int calculatePrice(int quantity) {
-        int price = quantity * 5;
+    private int calculatePrice() {
+        int price =  quantity * 5;
         return price;
     }
 }
