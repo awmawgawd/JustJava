@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method displays the given text on the screen.
+     * This method displays the given text on the screen
      */
     private String displayMessage() {
         String message = "Thank you!";
