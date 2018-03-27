@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void submitOrder(View view) {
 
-       String message = "Total: $" + (quantity * 5);
+       String message = "Total: $" + calculatePrice(quantity);
        message = message + "\nThank You!";
        displayMessage(message);
     }
@@ -96,4 +96,13 @@ public class MainActivity extends AppCompatActivity {
         priceTextView.setText(message);
     }
 
+    /**
+     * Calculates the price of the order based on the current quantity.
+     *
+     * @return the price
+     */
+    private int calculatePrice(int quantity) {
+        int price = quantity * 5;
+        return price;
+    }
 }

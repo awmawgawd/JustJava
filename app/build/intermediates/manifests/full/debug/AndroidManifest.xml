@@ -33,6 +33,4 @@
             android:value="27.0.0-SNAPSHOT" />
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
-
 </manifest>
