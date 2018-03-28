@@ -107,6 +107,11 @@ public class MainActivity extends AppCompatActivity {
         return price;
     }
 
+    /**
+     *
+     * @param price of order
+     * @return String summary of order
+     */
     public String createOrderSummary(int price){
         String priceMessage = "Name: Jacqueline";
         priceMessage += "\nQuantity: " + quantity;
