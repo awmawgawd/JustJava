@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
     public void submitOrder(View view) {
         int price = calculatePrice();
         String orderSummary = createOrderSummary(price);
-        displayPrice(quantity, orderSummary);
+        displayMessage(quantity, orderSummary);
     }
 
     /**
@@ -58,21 +58,20 @@ public class MainActivity extends AppCompatActivity {
      * This method displays the given price on the screen.
      */
     private void displayPrice(int number, String message) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        if(number != 0){
-            priceTextView.setText(message);
-        }
-        else{
-            priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
-        }
+
     }
 
     /**
      * This method displays the given text on the screen
      */
-    private String displayMessage() {
-        String message = "Thank you!";
-        return message;
+    private void displayMessage(int number, String msg) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        if(number != 0){
+            priceTextView.setText(msg);
+        }
+        else{
+            priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+        }
     }
 
     /**
