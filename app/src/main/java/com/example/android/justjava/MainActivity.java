@@ -39,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void submitOrder(View view) {
         int price = calculatePrice();
-        displayPrice(price);
+        String orderSummary = createOrderSummary(price);
+        displayPrice(quantity, orderSummary);
     }
 
     /**
@@ -56,13 +57,13 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method displays the given price on the screen.
      */
-    private void displayPrice(int number) {
+    private void displayPrice(int number, String message) {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         if(number != 0){
-            priceTextView.setText(NumberFormat.getCurrencyInstance().format(number) + "\n" + displayMessage());
+            priceTextView.setText(message);
         }
         else{
-             priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+            priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
         }
     }
 
@@ -104,5 +105,13 @@ public class MainActivity extends AppCompatActivity {
     private int calculatePrice() {
         int price =  quantity * 5;
         return price;
+    }
+
+    public String createOrderSummary(int price){
+        String priceMessage = "Name: Jacqueline";
+        priceMessage = priceMessage + "\nQuantity: " + quantity;
+        priceMessage = priceMessage + "\nTotal: $" + price;
+        priceMessage = priceMessage + "\nThank you!" ;
+        return priceMessage;
     }
 }
