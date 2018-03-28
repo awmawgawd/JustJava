@@ -55,22 +55,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This method displays the given price on the screen.
-     */
-    private void displayPrice(int number, String message) {
-
-    }
-
-    /**
      * This method displays the given text on the screen
      */
     private void displayMessage(int number, String msg) {
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
         if(number != 0){
-            priceTextView.setText(msg);
+            orderSummaryTextView.setText(msg);
         }
         else{
-            priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+            orderSummaryTextView.setText(NumberFormat.getCurrencyInstance().format(number));
         }
     }
 

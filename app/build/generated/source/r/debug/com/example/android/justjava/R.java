@@ -2768,10 +2768,10 @@ public final class R {
     public static final int notification_background=0x7f070048;
     public static final int notification_main_column=0x7f070049;
     public static final int notification_main_column_container=0x7f07004a;
-    public static final int packed=0x7f07004b;
-    public static final int parent=0x7f07004c;
-    public static final int parentPanel=0x7f07004d;
-    public static final int price_text_view=0x7f07004e;
+    public static final int order_summary_text_view=0x7f07004b;
+    public static final int packed=0x7f07004c;
+    public static final int parent=0x7f07004d;
+    public static final int parentPanel=0x7f07004e;
     public static final int progress_circular=0x7f07004f;
     public static final int progress_horizontal=0x7f070050;
     public static final int quantity_text_view=0x7f070051;
