@@ -41,15 +41,30 @@ public class MainActivity extends AppCompatActivity {
     public void submitOrder(View view) {
         int price = calculatePrice();
         boolean isWhippedBool = isWhipped();
-        String orderSummary = createOrderSummary(price, isWhippedBool);
+        boolean isChocBool = isChoc();
+        String orderSummary = createOrderSummary(price, isWhippedBool, isChocBool);
         displayMessage(quantity, orderSummary);
     }
 
+    /**
+     *
+     * @return if Whipped cream is selected true, or false if not
+     */
     private boolean isWhipped(){
         CheckBox wCh = (CheckBox) findViewById(R.id.whipCheck);
         return(wCh.isChecked());
 
     }
+
+    /**
+     *
+     * @return if Chocolate is selected true, or false if not
+     */
+    private boolean isChoc(){
+        CheckBox cCh = (CheckBox) findViewById(R.id.chocCheck);
+        return(cCh.isChecked());
+    }
+
     /**
      * This method displays the given quantity value on the screen.
      */
@@ -95,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
         displayQuantity(quantity);
     }
 
-
     /**
      * Calculates the price of the order based on the current quantity.
      *
@@ -112,9 +126,10 @@ public class MainActivity extends AppCompatActivity {
      * @param price of order
      * @return String summary of order
      */
-    public String createOrderSummary(int price, boolean hasWhippedCream){
+    public String createOrderSummary(int price, boolean hasWhippedCream, boolean hasChocolate){
         String priceMessage = "Name: Jacqueline";
         priceMessage += "\nAdd whipped cream? " + hasWhippedCream;
+        priceMessage += "\nAdd chocolate? " + hasChocolate;
         priceMessage += "\nQuantity: " + quantity;
         priceMessage += "\nTotal: $" + price;
         priceMessage += "\nThank you!" ;
