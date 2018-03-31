@@ -2,46 +2,52 @@
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
     api-level="24"
-    build-mode="COLD"
+    build-mode="HOT_WARM"
     density="560dpi"
     format="10"
     plugin-version="3.1.0"
-    timestamp="1522196139260"
+    timestamp="1522526966639"
     token="-5194682844959511310"
-    verifier="METHOD_DELETED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="194" />
-    <task
-        name="instant-run-dex"
         duration="0" />
     <task
+        name="instant-run-dex"
+        duration="120" />
+    <task
         name="instant-run-transform"
-        duration="51" />
+        duration="0" />
     <task
         name="verifier"
-        duration="5" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
+        location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+        type="RESOURCES" />
+    <artifact
+        location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\reload-dex\debug\classes.dex"
+        type="RELOAD_DEX" />
 
     <build
         build-mode="FULL"
-        timestamp="1522189326912"
+        timestamp="1522525990149"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
         <artifact
+            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+        <artifact
             location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\split-apk\debug\slices\slice_5.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\split-apk\debug\slices\slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
             type="SPLIT" />
         <artifact
             location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\split-apk\debug\dep\dependencies.apk"
@@ -64,28 +70,33 @@
         <artifact
             location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\split-apk\debug\slices\slice_3.apk"
             type="SPLIT" />
-        <artifact
-            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1522196077975"
-        verifier="R_CLASS_CHANGE" >
-        <artifact
-            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\split-apk\debug\slices\slice_9.apk"
-            type="SPLIT" />
-        <artifact
-            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1522196139260"
-        verifier="METHOD_DELETED" >
+        timestamp="1522526675086"
+        verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1522526939738"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
+    </build>
+    <build
+        build-mode="HOT_WARM"
+        timestamp="1522526966639"
+        verifier="COMPATIBLE" >
+        <artifact
+            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
+            type="RESOURCES" />
+        <artifact
+            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\reload-dex\debug\classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

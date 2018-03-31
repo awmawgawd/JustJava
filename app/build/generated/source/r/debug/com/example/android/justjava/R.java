@@ -2821,9 +2821,10 @@ public final class R {
     public static final int uniform=0x7f07007d;
     public static final int up=0x7f07007e;
     public static final int useLogo=0x7f07007f;
-    public static final int withText=0x7f070080;
-    public static final int wrap=0x7f070081;
-    public static final int wrap_content=0x7f070082;
+    public static final int whipCheck=0x7f070080;
+    public static final int withText=0x7f070081;
+    public static final int wrap=0x7f070082;
+    public static final int wrap_content=0x7f070083;
   }
   public static final class integer {
     public static final int abc_config_activityDefaultDur=0x7f080000;

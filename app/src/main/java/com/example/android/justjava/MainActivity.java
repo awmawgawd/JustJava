@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -39,10 +40,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void submitOrder(View view) {
         int price = calculatePrice();
-        String orderSummary = createOrderSummary(price);
+        boolean isWhippedBool = isWhipped();
+        String orderSummary = createOrderSummary(price, isWhippedBool);
         displayMessage(quantity, orderSummary);
     }
 
+    private boolean isWhipped(){
+        CheckBox wCh = (CheckBox) findViewById(R.id.whipCheck);
+        return(wCh.isChecked());
+
+    }
     /**
      * This method displays the given quantity value on the screen.
      */
@@ -105,8 +112,9 @@ public class MainActivity extends AppCompatActivity {
      * @param price of order
      * @return String summary of order
      */
-    public String createOrderSummary(int price){
+    public String createOrderSummary(int price, boolean hasWhippedCream){
         String priceMessage = "Name: Jacqueline";
+        priceMessage += "\nAdd whipped cream? " + hasWhippedCream;
         priceMessage += "\nQuantity: " + quantity;
         priceMessage += "\nTotal: $" + price;
         priceMessage += "\nThank you!" ;
