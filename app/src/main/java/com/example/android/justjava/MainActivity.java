@@ -1,13 +1,4 @@
-/**
- * IMPORTANT: Make sure you are using the correct package name.
- * This example uses the package name:
- * package com.example.android.justjava
- * If you get an error when copying this code into Android studio, update it to match teh package name found
- * in the project's AndroidManifest.xml file.
- **/
-
 package com.example.android.justjava;
-
 
 import android.content.Intent;
 import android.net.Uri;
@@ -47,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void submitOrder(View view) {
         /** Retrieve quantity **/
-        TextView qt = (TextView)findViewById(R.id.quantity_text_view);
+        TextView qt = (TextView) findViewById(R.id.quantity_text_view);
         quantity = Integer.parseInt(qt.getText().toString());
         /** Retrieve Name **/
         String name = getName();
@@ -65,28 +56,26 @@ public class MainActivity extends AppCompatActivity {
         composeEmail(name, orderSummary);
     }
 
-    private String getName(){
+    private String getName() {
         EditText nameText = (EditText) findViewById(R.id.nameET);
         return nameText.getText().toString();
     }
 
     /**
-     *
      * @return if Whipped cream is selected true, or false if not
      */
-    private boolean isWhipped(){
+    private boolean isWhipped() {
         CheckBox wCh = (CheckBox) findViewById(R.id.whipCheck);
-        return(wCh.isChecked());
+        return (wCh.isChecked());
 
     }
 
     /**
-     *
      * @return if Chocolate is selected true, or false if not
      */
-    private boolean isChoc(){
+    private boolean isChoc() {
         CheckBox cCh = (CheckBox) findViewById(R.id.chocCheck);
-        return(cCh.isChecked());
+        return (cCh.isChecked());
     }
 
     /**
@@ -119,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
     public void increment(View view) {
 
         quantity = quantity + 1;
-        if(quantity > 100){
+        if (quantity > 100) {
             Toast.makeText(getApplicationContext(), "Maximum quantity is 100.", Toast.LENGTH_SHORT).show();
             quantity = 100;
 
@@ -149,11 +138,11 @@ public class MainActivity extends AppCompatActivity {
      */
     private int calculatePrice(boolean whip, boolean choc) {
         /* $5 per cup. $1 extra for whipped cream. $2 extra for chocolate */
-        int price =  quantity * 5;
-        if(whip){
+        int price = quantity * 5;
+        if (whip) {
             price += quantity * 1;
         }
-        if(choc){
+        if (choc) {
             price += quantity * 2;
         }
 
@@ -161,17 +150,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     *
      * @param price of order
      * @return String summary of order
      */
-    public String createOrderSummary(String namez, int price, boolean hasWhippedCream, boolean hasChocolate){
+    public String createOrderSummary(String namez, int price, boolean hasWhippedCream, boolean hasChocolate) {
         String priceMessage = "Name: " + namez;
         priceMessage += "\nAdd whipped cream? " + hasWhippedCream;
         priceMessage += "\nAdd chocolate? " + hasChocolate;
         priceMessage += "\nQuantity: " + quantity;
         priceMessage += "\nTotal: $" + price;
-        priceMessage += "\nThank you!" ;
+        priceMessage += "\nThank you!";
         return priceMessage;
     }
 
