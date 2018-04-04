@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Declare and initialize quantity
      */
-    int quantity;
+    int quantity = 1;
 
 
     @Override
@@ -37,9 +37,7 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void submitOrder(View view) {
-        /** Retrieve quantity **/
-        TextView qt = (TextView) findViewById(R.id.quantity_text_view);
-        quantity = Integer.parseInt(qt.getText().toString());
+
         /** Retrieve Name **/
         String name = getName();
         /** Check if whipped cream and chocolate selected **/
@@ -154,12 +152,12 @@ public class MainActivity extends AppCompatActivity {
      * @return String summary of order
      */
     public String createOrderSummary(String namez, int price, boolean hasWhippedCream, boolean hasChocolate) {
-        String priceMessage = "Name: " + namez;
-        priceMessage += "\nAdd whipped cream? " + hasWhippedCream;
-        priceMessage += "\nAdd chocolate? " + hasChocolate;
-        priceMessage += "\nQuantity: " + quantity;
-        priceMessage += "\nTotal: $" + price;
-        priceMessage += "\nThank you!";
+        String priceMessage = getString(R.string.nameOrderSumm, namez);
+        priceMessage += "\n" + getString(R.string.order_summary_whipped_cream, hasWhippedCream);
+        priceMessage += "\n" + getString(R.string.order_summary_chocolate, hasChocolate);
+        priceMessage += "\n" + getString(R.string.order_summary_quantity, quantity);
+        priceMessage += "\n" + getString(R.string.order_summary_price, price);
+        priceMessage += "\n" + getString(R.string.thank_you);
         return priceMessage;
     }
 
