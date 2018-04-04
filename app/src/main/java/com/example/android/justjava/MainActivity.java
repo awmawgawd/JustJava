@@ -14,6 +14,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.text.NumberFormat;
@@ -39,11 +40,17 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void submitOrder(View view) {
+        String name = getName();
         int price = calculatePrice();
         boolean isWhippedBool = isWhipped();
         boolean isChocBool = isChoc();
-        String orderSummary = createOrderSummary(price, isWhippedBool, isChocBool);
+        String orderSummary = createOrderSummary(name, price, isWhippedBool, isChocBool);
         displayMessage(quantity, orderSummary);
+    }
+
+    private String getName(){
+        EditText nameText = (EditText) findViewById(R.id.nameET);
+        return nameText.getText().toString();
     }
 
     /**
@@ -126,8 +133,8 @@ public class MainActivity extends AppCompatActivity {
      * @param price of order
      * @return String summary of order
      */
-    public String createOrderSummary(int price, boolean hasWhippedCream, boolean hasChocolate){
-        String priceMessage = "Name: Jacqueline";
+    public String createOrderSummary(String namez, int price, boolean hasWhippedCream, boolean hasChocolate){
+        String priceMessage = "Name: " + namez;
         priceMessage += "\nAdd whipped cream? " + hasWhippedCream;
         priceMessage += "\nAdd chocolate? " + hasChocolate;
         priceMessage += "\nQuantity: " + quantity;
