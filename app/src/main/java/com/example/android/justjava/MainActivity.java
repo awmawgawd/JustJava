@@ -41,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
     public void submitOrder(View view) {
         String name = getName();
-        int price = calculatePrice();
         boolean isWhippedBool = isWhipped();
         boolean isChocBool = isChoc();
+        int price = calculatePrice(isWhippedBool, isChocBool);
         String orderSummary = createOrderSummary(name, price, isWhippedBool, isChocBool);
         displayMessage(quantity, orderSummary);
     }
@@ -122,9 +122,16 @@ public class MainActivity extends AppCompatActivity {
      *
      * @return the price
      */
-    private int calculatePrice() {
-        /* $5 per cup */
+    private int calculatePrice(boolean whip, boolean choc) {
+        /* $5 per cup. $1 extra for whipped cream. $2 extra for chocolate */
         int price =  quantity * 5;
+        if(whip){
+            price += 1;
+        }
+        if(choc){
+            price += 2;
+        }
+
         return price;
     }
 

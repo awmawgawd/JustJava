@@ -31,17 +31,17 @@
             android:id="@+id/whipCheck"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Whipped Cream" />
+            android:text="Whipped Cream (+$1)" />
         <CheckBox
             android:id="@+id/chocCheck"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chocolate" />
+            android:text="Chocolate (+$2)" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Quantity" />
+            android:text="Quantity ($5 ea)" />
 
         <LinearLayout
             android:layout_width="wrap_content"
