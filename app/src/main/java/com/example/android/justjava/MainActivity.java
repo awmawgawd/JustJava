@@ -9,6 +9,8 @@
 package com.example.android.justjava;
 
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -56,8 +58,11 @@ public class MainActivity extends AppCompatActivity {
         int price = calculatePrice(isWhippedBool, isChocBool);
         /** Create order summary **/
         String orderSummary = createOrderSummary(name, price, isWhippedBool, isChocBool);
+
         /** Print out order summary **/
-        displayMessage(quantity, orderSummary);
+        //displayMessage(quantity, orderSummary);
+
+        composeEmail(name, orderSummary);
     }
 
     private String getName(){
@@ -95,18 +100,18 @@ public class MainActivity extends AppCompatActivity {
         Log.v("number", "" + numcoffees);
     }
 
-    /**
-     * This method displays the given text on the screen
-     */
-    private void displayMessage(int number, String msg) {
-        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
-        if(number != 0){
-            orderSummaryTextView.setText(msg);
-        }
-        else{
-            orderSummaryTextView.setText(NumberFormat.getCurrencyInstance().format(number));
-        }
-    }
+//    /**
+//     * This method displays the given text on the screen
+//     */
+//    private void displayMessage(int number, String msg) {
+//        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
+//        if(number != 0){
+//            orderSummaryTextView.setText(msg);
+//        }
+//        else{
+//            orderSummaryTextView.setText(NumberFormat.getCurrencyInstance().format(number));
+//        }
+//    }
 
     /**
      * This method is called when the plus button is clicked.
@@ -168,5 +173,17 @@ public class MainActivity extends AppCompatActivity {
         priceMessage += "\nTotal: $" + price;
         priceMessage += "\nThank you!" ;
         return priceMessage;
+    }
+
+    public void composeEmail(String namez, String orderSumm) {
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setData(Uri.parse("mailto:"));
+        intent.setType("text/plain");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "JustJava order for " + namez);
+        intent.putExtra(Intent.EXTRA_TEXT, orderSumm);
+
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
     }
 }
