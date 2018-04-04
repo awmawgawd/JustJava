@@ -16,6 +16,9 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.text.NumberFormat;
 
@@ -26,7 +29,8 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Declare and initialize quantity
      */
-    int quantity = 0;
+    int quantity;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,11 +44,19 @@ public class MainActivity extends AppCompatActivity {
      */
 
     public void submitOrder(View view) {
+        /** Retrieve quantity **/
+        TextView qt = (TextView)findViewById(R.id.quantity_text_view);
+        quantity = Integer.parseInt(qt.getText().toString());
+        /** Retrieve Name **/
         String name = getName();
+        /** Check if whipped cream and chocolate selected **/
         boolean isWhippedBool = isWhipped();
         boolean isChocBool = isChoc();
+        /** Calculate price of drink **/
         int price = calculatePrice(isWhippedBool, isChocBool);
+        /** Create order summary **/
         String orderSummary = createOrderSummary(name, price, isWhippedBool, isChocBool);
+        /** Print out order summary **/
         displayMessage(quantity, orderSummary);
     }
 
@@ -102,6 +114,11 @@ public class MainActivity extends AppCompatActivity {
     public void increment(View view) {
 
         quantity = quantity + 1;
+        if(quantity > 100){
+            Toast.makeText(getApplicationContext(), "Maximum quantity is 100.", Toast.LENGTH_SHORT).show();
+            quantity = 100;
+
+        }
         displayQuantity(quantity);
     }
 
@@ -111,8 +128,11 @@ public class MainActivity extends AppCompatActivity {
     public void decrement(View view) {
 
         quantity = quantity - 1;
-        if (quantity < 0) {
-            quantity = 0;
+        /** Prevent quantity from going below 1 **/
+        if (quantity < 1) {
+            Toast.makeText(getApplicationContext(), "Minimum quantity is 1.", Toast.LENGTH_SHORT).show();
+            quantity = 1;
+
         }
         displayQuantity(quantity);
     }
@@ -126,10 +146,10 @@ public class MainActivity extends AppCompatActivity {
         /* $5 per cup. $1 extra for whipped cream. $2 extra for chocolate */
         int price =  quantity * 5;
         if(whip){
-            price += 1;
+            price += quantity * 1;
         }
         if(choc){
-            price += 2;
+            price += quantity * 2;
         }
 
         return price;

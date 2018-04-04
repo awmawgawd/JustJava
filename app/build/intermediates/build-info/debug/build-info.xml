@@ -5,32 +5,31 @@
     build-mode="COLD"
     density="560dpi"
     format="10"
-    ir-eligibility="METHOD_DELETED"
     plugin-version="3.1.0"
-    timestamp="1522809610455"
+    timestamp="1522816796683"
     token="-5194682844959511310"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="245" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="48" />
+        duration="0" />
     <task
         name="verifier"
-        duration="6" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
-        type="SPLIT" />
+        location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1522802422859"
+        timestamp="1522815725795"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
@@ -71,20 +70,20 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1522809490406"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="METHOD_DELETED"
-        timestamp="1522809610455"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1522816672238"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
             type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1522816796683"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\instant-run-apk\debug\app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>
