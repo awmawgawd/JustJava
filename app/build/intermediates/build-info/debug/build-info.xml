@@ -6,7 +6,7 @@
     density="560dpi"
     format="10"
     plugin-version="3.1.0"
-    timestamp="1522833786868"
+    timestamp="1522834370307"
     token="-5194682844959511310"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -89,7 +89,7 @@
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1522833661268"
+        timestamp="1522834142294"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\split-apk\debug\slices\slice_2.apk"
@@ -97,7 +97,7 @@
     </build>
     <build
         build-mode="COLD"
-        timestamp="1522833786868"
+        timestamp="1522834370307"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\green\OneDrive\AndroidProg\JustJava\app\build\intermediates\instant-run-apk\debug\app-debug.apk"

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Just Java</string>
-    <string name="whipped">Crema batida</string>
+    <string name="whipped">Crema batida (+1) </string>
+    <string name="chocolate">Chocolate (+2)</string>
     <string name="toppings">Ingredientes</string>
-    <string name="quantity">Cantidad ($5 por taza)</string>
+    <string name="quantity">Cantidad (5 por taza)</string>
     <string name="orderBt">Ordenar</string>
     <string name="nameHint">Nombre</string>
     <string name="nameOrderSumm">Nombre: <xliff:g id="nameOS" example="Jackie">%1$s</xliff:g></string>
